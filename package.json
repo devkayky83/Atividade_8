@@ -1,0 +1,25 @@
+{
+  "name": "atividade_8",
+  "version": "1.0.0",
+  "description": "Atividade 8.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./app.js",
+    "dev": "nodemon ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kayky Júnio",
+  "license": "ISC",
+  "dependencies": {
+    "@sequelize/postgres": "^7.0.0-alpha.46",
+    "bcrypt": "^6.0.0",
+    "connect-session-sequelize": "^8.0.0",
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.1",
+    "express-session": "^1.18.1",
+    "mysql2": "^3.14.1",
+    "nodemon": "^3.1.10",
+    "sequelize": "^6.37.7"
+  }
+}

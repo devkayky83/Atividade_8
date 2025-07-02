@@ -1,0 +1,73 @@
+<h1>Desenvolvedores</h1>
+
+<form action="/desenvolvedores/{{#if action }}save{{else}}create{{/if}}" method="post">
+
+    <input type="hidden" name="id" value="{{desenvolvedor_editing.id}}">
+
+    <label for="name">Name</label><br>
+
+    <input type="text" id="name" name="name" value="{{desenvolvedor_editing.name}}" required><br><br>
+
+    <label for="description">Country</label><br>
+
+    <input type="text" id="country" name="description" value="{{desenvolvedor_editing.country}}" required><br><br>
+
+    <button>{{#if action }}Editar{{else}}Criar{{/if}}</button>
+
+</form>
+
+<hr>
+
+<table>
+
+    <thead>
+
+        <tr>
+
+            <th>Name</th>
+
+            <th>Country</th>
+
+            <th>Ações</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        {{#each desenvolvedores}}
+
+        <tr>
+
+            <td>{{this.name}}</td>
+
+            <td>{{this.country}}</td>
+
+            <td style="display: flex; justify-content: space-evenly;">
+
+                <form action="/desenvolvedores/edit" method="post">
+
+                    <input type="hidden" name="id" value="{{this.id}}">
+
+                    <button>Edit</button>
+
+                </form>
+
+                <form action="/desenvolvedores/delete" method="post">
+
+                    <input type="hidden" name="id" value="{{this.id}}">
+
+                    <button>Del</button>
+
+                </form>
+
+            </td>
+
+        </tr>
+
+        {{/each}}
+
+    </tbody>
+
+</table>

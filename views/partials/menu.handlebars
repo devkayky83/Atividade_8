@@ -1,0 +1,30 @@
+<nav>
+
+  <ul style="display: flex; justify-content: start; list-style: none;">
+
+    <li><a href="/">Home</a>&nbsp;</li>
+
+    <li><a href="/films">Jogos</a>&nbsp;</li>
+
+    <li><a href="/actors">Jogadores</a>&nbsp;</li>
+
+    <li><a href="/directors">Desenvolvedores</a>&nbsp;</li>
+
+    {{! user é um objeto global, criado no controller login }}
+
+    {{#if user}}
+
+      <li><a href="/users/logout">Sair</a>&nbsp;</li>
+
+    {{else}}
+
+      <li><a href="/users/login">Entrar</a>&nbsp;</li>
+
+      <li><a href="/users/register">Registrar</a>&nbsp;</li>
+
+    {{/if}}
+
+  </ul>
+
+</nav>
+
