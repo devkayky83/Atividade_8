@@ -87,7 +87,7 @@ app.set('view engine', 'handlebars');
 app.set('views', './views');
 
 app.get("/", (req, res) => {
-  res.end("Rodando");
+  res.render("Rodando");
 });
 
 app.use("/jogos", checkLogged, jogo_web_router);
